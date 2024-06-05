@@ -2,6 +2,8 @@ package com.nestor.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+
 import com.nestor.entity.Mascota;
 
 public interface MascotaService {
@@ -10,14 +12,15 @@ public interface MascotaService {
 	
 	public Mascota guardarMascota(Mascota mascota);
 	
-	public List<Mascota> listarMascotas();
+	public Iterable<Mascota> listarMascotas();
 	
 	public List<Mascota> listarMascotasMasJovenes();
 	
-	public List<Mascota> listarMascotasPag5();
 		
 	public List<Mascota> mostrarMascotaPorNombre(String name);
 	
 	public void eliminarMascota(Long id);
+	
+	public Page<Mascota> listarMascotasPaginadas(int pag, int qtty);
 
 }

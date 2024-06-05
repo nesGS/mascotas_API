@@ -10,8 +10,8 @@ import com.nestor.entity.Mascota;
 @Repository
 public interface MascotaRepository extends JpaRepository<Mascota, Long> {
 	
-	List<Mascota> findByOrderByFechaNacDesc();
-    List<Mascota> findByNombre(String nombre);
+	List<Mascota> findTop20ByOrderByFechaNacDesc();
+    List<Mascota> findByNombreIgnoreCase(String nombre);
 
 	
 }
