@@ -17,7 +17,7 @@ public class MascotasApiApplication {
 	}
 
 	
-	// Método para la documentación de la API a través de OpenApi
+	// Clase para la documentación de la API a través de OpenApi
 	@Configuration
 	public class OpenAPIConfig {
 	    @Bean
